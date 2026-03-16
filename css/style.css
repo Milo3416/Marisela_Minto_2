@@ -1,0 +1,145 @@
+/* --- Variables de Diseño y Paleta de Colores --- */
+:root {
+    --primary-black: #111111;       /* Fondo principal y textos */
+    --accent-gold: #D4AF37;         /* Dorado sutil para acentos */
+    --cream-light: #F9F6F0;        /* Crema muy claro para secciones de texto */
+    --cream-dark: #E3dac9;          /* Crema más oscuro para tarjetas */
+    --text-on-dark: #F9F6F0;        /* Crema claro para texto sobre negro */
+    --text-on-light: #333333;       /* Gris oscuro para texto sobre crema */
+    
+    --font-heading: 'Cormorant Garamond', serif; /* Elegante y serif */
+    --font-body: 'Montserrat', sans-serif;       /* Moderna y legible */
+}
+
+/* --- Estilos Globales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--primary-black);
+    color: var(--text-on-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--accent-gold);
+}
+
+/* --- Sección Hero (Encabezado) --- */
+.hero {
+    height: 70vh; /* Ocupa el 70% de la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #222 0%, #111 100%); /* Efecto de luz central */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-logo {
+    max-width: 180px; /* Tamaño del logo circular */
+    height: auto;
+    border-radius: 50%; /* Asegura que la imagen sea circular */
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra elegante */
+}
+
+.hero-slogan {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--cream-light);
+    letter-spacing: 2px;
+}
+
+/* --- Sección de Identidad (Misión, Visión) --- */
+.identity-section {
+    padding: 80px 0;
+    background-color: var(--cream-light);
+    color: var(--text-on-light);
+}
+
+.identity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Rejilla responsiva */
+    gap: 40px;
+}
+
+.identity-card {
+    background-color: var(--cream-dark);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.identity-card:hover {
+    transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
+}
+
+.identity-card p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* --- Sección de Objetivo General --- */
+.objective-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--primary-black);
+}
+
+.objective-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.objective-content p {
+    font-size: 1.3rem;
+    color: var(--cream-light);
+    font-weight: 300;
+}
+
+/* --- Pie de Página (Footer) --- */
+footer {
+    padding: 30px 0;
+    border-top: 1px solid #222;
+    background-color: #0d0d0d;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #333;
+}
